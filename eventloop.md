@@ -69,6 +69,7 @@ Step-by-Step Order of Execution
 7️⃣ **Close Callbacks Phase (cleanup operations)**
    - Runs cleanup tasks for closed resources (e.g., `socket.on("close")`).  
 
+<pre>
  ┌───────────────────────────┐
  │        Main Script        │
  │  (Synchronous Execution)  │
@@ -103,3 +104,4 @@ Step-by-Step Order of Execution
  ┌───────────────────────────┐
  │  Close Callbacks Phase    │  <--- socket.on("close")
  └───────────────────────────┘
+</pre>
