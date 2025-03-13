@@ -41,35 +41,33 @@ Step-by-Step Order of Execution
 2. Run Microtasks (process.nextTick and Promises).
 3. Run Macrotasks in the Event Loop Phases (setTimeout, I/O, setImmediate).
 
-
 ## 📌 Execution Priority Order in Node.js
-1️⃣ Synchronous Code (Top Priority)
+1️⃣ **Synchronous Code (Top Priority)**
+   - Executes **first** before anything else.  
+   - Example: `console.log("Start")`
 
-Executes first before anything else.
-Example: console.log("Start")
-2️⃣ process.nextTick() (Highest Priority Microtask)
+2️⃣ **process.nextTick() (Highest Priority Microtask)**
+   - Runs **immediately after synchronous code** and **before the event loop continues**.  
+   - Example: `process.nextTick(() => console.log("nextTick"))`
 
-Runs immediately after synchronous code and before the event loop continues.
-Example: process.nextTick(() => console.log("nextTick"))
-3️⃣ Microtasks (Promise then/catch, queueMicrotask)
+3️⃣ **Microtasks (Promise then/catch, queueMicrotask)**
+   - Runs **after nextTick but before Macrotasks**.  
+   - Example: `Promise.resolve().then(() => console.log("Promise"))`
 
-Runs after nextTick but before Macrotasks.
-Example: Promise.resolve().then(() => console.log("Promise"))
-4️⃣ Timers Phase (setTimeout, setInterval)
+4️⃣ **Timers Phase (setTimeout, setInterval)**
+   - Executes after the given delay.  
+   - Example: `setTimeout(() => console.log("setTimeout"), 0)`
 
-Executes after the given delay.
-Example: setTimeout(() => console.log("setTimeout"), 0)
-5️⃣ I/O Callbacks Phase (fs.readFile, network requests)
+5️⃣ **I/O Callbacks Phase (fs.readFile, network requests)**
+   - Runs callbacks after I/O operations complete.  
+   - Example: `fs.readFile("file.txt", () => console.log("File Read"))`
 
-Runs callbacks after I/O operations complete.
-Example: fs.readFile("file.txt", () => console.log("File Read"))
-6️⃣ Check Phase (setImmediate)
+6️⃣ **Check Phase (setImmediate)**
+   - Executes callbacks scheduled with `setImmediate()`.  
+   - Example: `setImmediate(() => console.log("setImmediate"))`
 
-Executes callbacks scheduled with setImmediate().
-Example: setImmediate(() => console.log("setImmediate"))
-7️⃣ Close Callbacks Phase (cleanup operations)
-
-Runs cleanup tasks for closed resources (e.g., socket.on("close")).
+7️⃣ **Close Callbacks Phase (cleanup operations)**
+   - Runs cleanup tasks for closed resources (e.g., `socket.on("close")`).  
 
  ┌───────────────────────────┐
  │        Main Script        │
