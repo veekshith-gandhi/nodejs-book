@@ -9,3 +9,10 @@ Node.js is built on the V8 JavaScript engine (the same engine used in Google Chr
 - Non-blocking I/O - It can handle multiple requests at the same time.
 - Single-threaded - It runs JavaScript code in a single thread but uses an event-driven architecture to handle multiple operations efficiently.
 - libuv - A library that helps Node.js manage asynchronous tasks like file reading, network requests, and database queries.
+
+## Key Features of Node.js
+
+- Asynchronous and Non-blocking – Node.js handles multiple requests simultaneously.
+- Single-threaded but Highly Scalable – Uses an event loop to manage multiple operations efficiently.
+- Built-in Package Manager (npm) – Provides thousands of free libraries.
+- Cross-platform – Runs on Windows, macOS, and Linux.
