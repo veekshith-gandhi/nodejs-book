@@ -47,7 +47,7 @@ Step-by-Step Order of Execution
    - Example: `console.log("Start")`
 
 2️⃣ **process.nextTick() (Highest Priority Microtask)**
-   - Runs **immediately after synchronous code** and **before the event loop continues**.  
+   - Runs **immediately after synchronous code** and **before the event loop continues** (executes before promises).  
    - Example: `process.nextTick(() => console.log("nextTick"))`
 
 3️⃣ **Microtasks (Promise then/catch, queueMicrotask)**
@@ -105,3 +105,15 @@ Step-by-Step Order of Execution
  │  Close Callbacks Phase    │  <--- socket.on("close")
  └───────────────────────────┘
 </pre>
+
+
+### 🔁 1. What happens if you have 1 million process.nextTick()?
+
+- ✅ process.nextTick() runs before the event loop goes to the next phase, so it keeps executing indefinitely and blocks the event loop.
+⛔️ Result:
+
+1. I/O callbacks (like setTimeout, fs.readFile, etc.) are starved
+2. The event loop never proceeds
+3. CPU goes 100%, and the process can even crash with a "tick queue overflow"
+
+### 🔗 Conclusion: Don't use unbounded process.nextTick() — it's for small, immediate async tasks only.
