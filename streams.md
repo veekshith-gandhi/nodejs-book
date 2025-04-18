@@ -10,6 +10,6 @@
 ### 🔹 a) Readable Streams
 - Streams you read from.
 - Examples: fs.createReadStream, http.IncomingMessage
-const fs = require('fs');
-const readable = fs.createReadStream('bigfile.txt');
-readable.on('data', (chunk) => console.log(chunk.toString()));
+- const fs = require('fs');
+- const readable = fs.createReadStream('bigfile.txt');
+- readable.on('data', (chunk) => console.log(chunk.toString()));
