@@ -33,4 +33,4 @@ State	------------Meaning
 | `Promise.all([p1, p2])`     | Waits for **all Promises to resolve**. Fails fast if any one rejects.        | Array of results     | `Promise.all([p1, p2]).then(console.log)`                               |
 | `Promise.allSettled([p1])`  | Waits for **all Promises to settle** (resolve or reject).                   | Array of statuses    | `Promise.allSettled([p1, p2]).then(console.log)`                        |
 | `Promise.race([p1, p2])`    | Returns result of the **first settled Promise** (resolve or reject).         | Single result        | `Promise.race([p1, p2]).then(console.log)`                              |
-| `Promise.any([p1, p2])`     | Returns the **first fulfilled Promise**. Ignores rejects unless all fail.    | First success value  | `Promise.any([p1, p2]).then(console.log)`                               |
+| `Promise.any([p1, p2])`     | Returns the **first fulfilled Promise**. Throws aggregate error if all fails.    | First success value  | `Promise.any([p1, p2]).then(console.log)`                               |
