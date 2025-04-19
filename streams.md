@@ -13,3 +13,27 @@
 - const fs = require('fs');
 - const readable = fs.createReadStream('bigfile.txt');
 - readable.on('data', (chunk) => console.log(chunk.toString()));
+
+### 🔸 b) Writable Streams
+- Streams you write to.
+- Examples: fs.createWriteStream, http.ServerResponse
+- const writable = fs.createWriteStream('output.txt');
+- writable.write('Hello, stream!');
+
+### 🔁 c) Duplex Streams
+- Can read and write.
+
+### 🔀 d) Transform Streams
+- Like Duplex, but also modifies data as it passes.
+
+### 🔄 3. pipe() and unpipe()
+
+- pipe(): Sends output of one stream to another
+- const read = fs.createReadStream('input.txt');
+- const write = fs.createWriteStream('output.txt');
+- read.pipe(write);
+- Handles errors automatically
+- Closes the writable stream on end of readable
+
+- unpipe(): Stops the piping
+- read.unpipe(write);
