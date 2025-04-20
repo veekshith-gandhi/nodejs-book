@@ -12,7 +12,7 @@
 
 ## ✅ Examples
 
-### 🔹 Class & Object
+### 🔹 Class & Object (You use classes to define blueprints, and then you create objects from them.)
 ```js
 class Car {
   constructor(brand, speed) {
@@ -28,7 +28,8 @@ class Car {
 const myCar = new Car('BMW', 120);
 myCar.drive(); // Output: BMW is driving at 120 km/h
 
-🔹 Encapsulation
+🔹 Encapsulation :  Encapsulation means hiding internal details of an object and protecting data. 
+    We do this by keeping data inside a class and using methods to interact with it.
 
 class BankAccount {
   #balance = 0;
@@ -46,7 +47,7 @@ const acc = new BankAccount();
 acc.deposit(500);
 console.log(acc.getBalance());  // Output: 500
 
-🔹 Abstraction
+🔹 Abstraction : Abstraction means hiding complexity and showing only the essentials.
 
 class CoffeeMachine {
   makeCoffee() {
@@ -63,7 +64,7 @@ const machine = new CoffeeMachine();
 machine.makeCoffee();  // Output: Boiling water... Here's your coffee!
 
 
-🔹 Inheritance
+🔹 Inheritance : Inheritance allows a class to reuse code from another class.
 
 class Animal {
   constructor(name) {
@@ -85,7 +86,8 @@ const dog = new Dog('Tommy');
 dog.speak();  // Output: Tommy barks.
 
 
-🔹 Polymorphism
+🔹 Polymorphism : Polymorphism means many forms — different classes can have methods
+     with the same name but behave differently.
 
 class Shape {
   draw() {
