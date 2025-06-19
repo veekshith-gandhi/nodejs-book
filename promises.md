@@ -34,3 +34,12 @@ State	------------Meaning
 | `Promise.allSettled([p1])`  | Waits for **all Promises to settle** (resolve or reject).                   | Array of statuses    | `Promise.allSettled([p1, p2]).then(console.log)`                        |
 | `Promise.race([p1, p2])`    | Returns result of the **first settled Promise** (resolve or reject).         | Single result        | `Promise.race([p1, p2]).then(console.log)`                              |
 | `Promise.any([p1, p2])`     | Returns the **first fulfilled Promise**. Throws aggregate error if all fails.    | First success value  | `Promise.any([p1, p2]).then(console.log)`                               |
+
+## 🔁 forEach() and Promises: Why They Don't Mix
+- In JavaScript, forEach() is a synchronous array method. It doesn’t wait for any asynchronous operation inside it to finish before moving to the next item.
+
+### 🔎 The Problem
+- If you use async/await inside a forEach(), the outer function doesn’t wait for all the Promises to resolve.
+- forEach doesn’t return a Promise.
+- So even though the callback is async, forEach doesn't know or care.
+- It doesn't wait for anything. It just keeps looping synchronously.
