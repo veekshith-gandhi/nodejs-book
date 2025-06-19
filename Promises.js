@@ -33,12 +33,29 @@ const myPromise = new Promise((resolve, reject) => {
 //   Promise.reject("Fail"),
 //   Promise.reject("Win")
 // ]).then(console.log);
+
 // Output: "Win"
 
-Promise.resolve()
-  .then(() => {
-    throw new Error("Something broke");
-  })
-  .catch(err => {
-    console.log("Caught error:", err.message);
-  });
+// Promise.resolve()
+//   .then(() => {
+//     throw new Error("Something broke");
+//   })
+//   .catch(err => {
+//     console.log("Caught error:", err.message);
+//   });
+
+
+
+
+Promise.resolve().finally(()=>{
+  console.log("HOLAA")
+}).then(()=>{
+  console.log("SUCESS")
+})
+Promise.reject().then(()=>{
+  console.log("SUCESS 1")
+}).catch(()=>{
+  console.log("FAILUR 1")
+}).finally(()=>{
+  console.log("HIRRAY 1")
+})
