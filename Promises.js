@@ -11,11 +11,11 @@
 // console.log("End");
 
 
-const myPromise = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve("Data fetched ✅");
-  }, 2000);
-});
+// const myPromise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve("Data fetched ✅");
+//   }, 2000);
+// });
 
 // myPromise.then((res) => "Hello")
 // .then((res) => console.log("second",res))
@@ -50,7 +50,7 @@ const myPromise = new Promise((resolve, reject) => {
 Promise.resolve().finally(()=>{
   console.log("HOLAA")
 }).then(()=>{
-  console.log("SUCESS")
+  console.log("-SUCESS")
 })
 Promise.reject().then(()=>{
   console.log("SUCESS 1")
@@ -58,4 +58,12 @@ Promise.reject().then(()=>{
   console.log("FAILUR 1")
 }).finally(()=>{
   console.log("HIRRAY 1")
+})
+
+Promise.reject().catch(()=>{
+  console.log("CAUGHT");
+}).then(()=>{
+  console.log("CAUGHT-success")
+}).finally(()=>{
+  console.log("FINALY- CAUGHT")
 })
