@@ -69,24 +69,29 @@
 - Before Cloud = Own and manage everything
 - After Cloud = Rent and scale easily
 
+---
 ## what is cloud ?
 - cloud with unlimted space with all the services avilable!
 - local system with limited space 
 
+---
 ## cloud computing ?
 - using internet to rent servers , storage , databases instead of owning them!
 
+---
 ## Cloud Service Models
 - IaaS: Rent infrastructure, you manage most (Virtual machines (servers) ex : EC2)
 - PaaS: Platform provided, manage only code  (Runtime environment)
 - SaaS: Ready software, no management  (Ready-to-use software)
 
+---
 ## Deployment Models
 - Public: Shared, internet-based  
 - Private: Dedicated, secure  
 - Hybrid: Mix of public + private  
-- Community: Shared by similar orgs  
-
+- Community: Shared by similar orgs 
+ 
+---
 ## Cloud Providers
 
 ### AWS
