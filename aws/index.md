@@ -90,7 +90,7 @@
 - Private: Dedicated, secure  
 - Hybrid: Mix of public + private  
 - Community: Shared by similar orgs 
- 
+
 ---
 ## Cloud Providers
 
@@ -108,3 +108,46 @@
 - GCP: Google cloud (strong in data, AI/ML) 
 - Pros: Best for AI/ML & data, simple pricing  
 - Cons: Fewer services, smaller market share  
+
+---
+## Advantages of AWS
+- Highly scalable (auto-scale anytime)  
+- Pay-as-you-go pricing  
+- Global infrastructure (low latency)  
+- Wide range of services  
+- High reliability & availability  
+- Strong security & compliance  
+- Easy integration with tools  
+
+---
+## AWS Architecture (Simple)
+
+- Region: Geographic area (e.g., us-east-1)  
+- Availability Zone (AZ): Isolated data centers within a region  
+- VPC: Private network in AWS  
+- Subnets: Public & private network segments  
+- EC2: Virtual servers  
+- S3: Storage service  
+- RDS: Managed database  
+- Load Balancer: Distributes traffic  
+- Auto Scaling: Adjusts servers automatically  
+- IAM: Access & security control  
+
+---
+### EC2 (Elastic Compute Cloud)
+- Raw virtual server (VM)  
+- You install and manage everything  
+- Full control, more effort  
+
+### Elastic Beanstalk
+- Upload code, AWS handles infra  
+- Auto scaling, load balancing included  
+- Less control, easy to use  
+
+## ⚡ Key Difference
+- EC2: You manage server  
+- Beanstalk: AWS manages server  
+
+---
+
+
