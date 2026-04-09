@@ -150,4 +150,26 @@
 
 ---
 
+## ☁️ What is AWS Lambda?
+- Serverless compute service  
+- Run code without managing servers  
 
+## ✅ Advantages
+- No server management  
+- Auto scaling  
+- Pay only for execution time  
+- Fast deployment  
+
+## ❌ Limitations
+- Timeout limit (short-running tasks)  
+- Cold start latency  
+- Limited control over environment  
+
+## ⚡ Use Cases
+- Backend APIs  
+- File processing  
+- Automation scripts  
+- Event-driven apps  
+
+## 🧠 Summary
+- Lambda = Run code without servers (serverless)  
