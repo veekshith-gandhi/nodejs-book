@@ -111,3 +111,5 @@
 
 ## 🔥 Final Flow
 👉 Buy beans → Roast → Cool → Rest → Grind → Mix chicory → Pack → Sell → Brew
+
+## ❌ NO BEANS
